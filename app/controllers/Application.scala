@@ -15,11 +15,6 @@ object Application extends Controller {
   val testActor = akkaSys.actorOf(Props[TestActor], name = "test-actor-yesterday")
   implicit val timeout = Timeout(5 seconds)
 
-
-  def index = Action {
-    Ok(views.html.index("Your new application is ready."))
-  }
-
   def firstAsyncAction = Action.async { req =>
     val result = (testActor ? Ping).mapTo[String]
     result.map(Ok(_))
