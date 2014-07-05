@@ -6,6 +6,6 @@ Using Play Framework 2.3 and Akka to make simple requests
 ## Usage
 start app with ```activator run```
 
-ping route        -> http://localhost:9000/ping
+ping route        -> [http://localhost:9000/ping](http://localhost:9000/ping)
 
-multi-actor route -> http://localhost:9000/worker/<key to add>
+multi-actor route -> [http://localhost:9000/worker/some-key](http://localhost:9000/worker/test)
